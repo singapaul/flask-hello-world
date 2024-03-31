@@ -1,5 +1,3 @@
 Flask
 Gunicorn
 openai
-json
-dotenv
