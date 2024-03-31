@@ -8,7 +8,7 @@ load_dotenv()
 
 my_id = os.getenv("API_KEY")
 
-openai.api_key = config["API_KEY"]
+openai.api_key = my_id
 
 def call_playlist_prompt():
     data = request.get_json()  # Parses the JSON data and returns a Python dictionary
