@@ -3,10 +3,17 @@ from flask import request
 from dotenv import dotenv_values
 import openai
 from completionCall import call_playlist_prompt
+from dotenv import load_dotenv
+import os #provides ways to access the Operating System and allows us to read the environment variables
+
+load_dotenv()
+
+my_id = os.getenv("API_KEY")
 
 
-config = dotenv_values('.env')
-openai.api_key = config["API_KEY"]
+
+# config = dotenv_values('.env')
+openai.api_key = my_id
 
 
 app = Flask(__name__)
