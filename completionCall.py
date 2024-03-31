@@ -1,10 +1,14 @@
 from flask import request
-from dotenv import dotenv_values
 import openai
 import json
-config = dotenv_values('.env')
+from dotenv import load_dotenv
+import os #provides ways to access the Operating System and allows us to read the environment variables
+
+load_dotenv()
+
+my_id = os.getenv("API_KEY")
+
 openai.api_key = config["API_KEY"]
- 
 
 def call_playlist_prompt():
     data = request.get_json()  # Parses the JSON data and returns a Python dictionary
