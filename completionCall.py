@@ -1,12 +1,10 @@
 from flask import request
 import openai
 import json
-from dotenv import load_dotenv
-import os #provides ways to access the Operating System and allows us to read the environment variables
+ 
+ 
 
-load_dotenv()
-
-my_id = os.getenv("API_KEY")
+my_id = 'ejflwekjf'
 
 openai.api_key = my_id
 
